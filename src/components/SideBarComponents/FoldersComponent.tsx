@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useApi } from "../Context/APIContext";
 import { ClipLoader } from "react-spinners";
 import { useEffect, useState } from "react";
-import { Folder } from "../../Configurations/TypesConfigration";
+import { Folder } from "../../configurations/TypesConfigration";
 
 const FoldersComponent = () => {
   const {

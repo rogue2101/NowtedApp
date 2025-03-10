@@ -3,9 +3,8 @@ import {
   Folder,
   NotesPreview,
   Note,
-  RecentNotesPreview,
   ApiContextType,
-} from "../../Configurations/TypesConfigration";
+} from "../../configurations/TypesConfigration";
 import AxiosApi from "../../AxiosApiInstance";
 import { toast } from "react-toastify";
 
@@ -15,7 +14,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [folders, setFolders] = useState<Folder[]>([]);
-  const [recentNotes, setRecentNotes] = useState<RecentNotesPreview[]>([]);
+  const [recentNotes, setRecentNotes] = useState<NotesPreview[]>([]);
   const [searchText, setSearchText] = useState<string>("");
   const [search, setSearch] = useState<boolean>(false);
   const [foldersLoading, setFoldersLoading] = useState(true);
@@ -38,7 +37,7 @@ export const ApiProvider: React.FC<{ children: React.ReactNode }> = ({
     setNotesLoading(true);
     AxiosApi.get("/notes/recent")
       .then((response) => {
-        const recentNotesData: RecentNotesPreview[] = response.data.recentNotes;
+        const recentNotesData: NotesPreview[] = response.data.recentNotes;
         setRecentNotes(recentNotesData);
       })
       .catch((error) => {

@@ -1,6 +1,6 @@
 import { useApi } from "../Context/APIContext";
 import { ClipLoader } from "react-spinners";
-import { RecentNotesPreview } from "../../Configurations/TypesConfigration";
+import { NotesPreview } from "../../configurations/TypesConfigration";
 import { useNavigate } from "react-router-dom";
 
 const RecentNoteComponent = () => {
@@ -8,7 +8,7 @@ const RecentNoteComponent = () => {
 
   const navigate = useNavigate();
 
-  function handleRecentNotesButton(recentNote: RecentNotesPreview) {
+  function handleRecentNotesButton(recentNote: NotesPreview) {
     navigate(`/recent/${recentNote.folderId}/notes/${recentNote.id}`);
   }
 

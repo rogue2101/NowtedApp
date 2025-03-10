@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useApi } from "../Context/APIContext";
-import { Note } from "../../Configurations/TypesConfigration";
+import { Note } from "../../configurations/TypesConfigration";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 

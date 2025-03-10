@@ -1,4 +1,4 @@
-import { Note } from "../../Configurations/TypesConfigration";
+import { Note } from "../../configurations/TypesConfigration";
 import { useApi } from "../Context/APIContext";
 
 type DeletedNotes = {

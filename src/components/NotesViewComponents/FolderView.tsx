@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useApi } from "../Context/APIContext";
 import { ClipLoader } from "react-spinners";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { NotesPreview } from "../../Configurations/TypesConfigration";
+import { NotesPreview } from "../../configurations/TypesConfigration";
 
 const FolderView = () => {
   const {

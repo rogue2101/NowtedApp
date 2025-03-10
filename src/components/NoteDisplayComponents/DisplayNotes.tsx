@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useApi } from "../Context/APIContext";
 import { useEffect, useState } from "react";
-import { Note } from "../../Configurations/TypesConfigration";
+import { Note } from "../../configurations/TypesConfigration";
 import NotesView from "./NotesView";
 import NoNotesView from "./NoNotesView";
 import DeletedNoteView from "./DeletedNoteView";

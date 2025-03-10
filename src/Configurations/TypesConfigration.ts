@@ -19,19 +19,6 @@ export type NotesPreview = {
   folder: Folder;
 };
 
-export type RecentNotesPreview = {
-  id: string;
-  folderId: string;
-  title: string;
-  isFavorite: boolean;
-  isArchived: boolean;
-  createdAt: string;
-  updatedAt: string;
-  deletedAt: string;
-  preview: string;
-  folder: Folder;
-};
-
 export type Note = {
   id: string;
   folderId: string;
@@ -47,7 +34,7 @@ export type Note = {
 
 export interface ApiContextType {
   folders: Folder[];
-  recentNotes: RecentNotesPreview[];
+  recentNotes: NotesPreview[];
   search: boolean;
   searchText: string;
   addNewFolder: (folderName: string) => Promise<Folder | undefined>;
